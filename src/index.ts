@@ -41,8 +41,8 @@ const currencyConverterTool = tool(
   async ({ amount, source, target }) => {
     const resp = await fetch(`https://open.er-api.com/v6/latest/${source}`)
     const data: ExchangeRateResponse = await resp.json()
-    const result = amount * data.rates[target]
-    return result.toFixed(2)
+    const result = (amount * data.rates[target]).toFixed(2)
+    return `${amount} ${source} = ${result} ${target}`
   },
   {
     name: 'currencyConverter',
