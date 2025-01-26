@@ -8,10 +8,10 @@ const app = new Hono()
 
 const llm = new ChatOpenAI({
   configuration: {
-    baseURL: 'https://closedai.imbytecat.com/v1',
+    baseURL: 'https://closedai.furtherverse.com/v1',
   },
   apiKey: process.env['OPENAI_API_KEY'],
-  model: 'gpt-4o-mini',
+  model: 'deepseek-chat',
   temperature: 0,
 })
 
